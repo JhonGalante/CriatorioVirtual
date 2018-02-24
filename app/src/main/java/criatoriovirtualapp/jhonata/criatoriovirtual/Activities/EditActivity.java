@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import br.com.sapereaude.maskedEditText.MaskedEditText;
 import criatoriovirtualapp.jhonata.criatoriovirtual.Database.Database;
 import criatoriovirtualapp.jhonata.criatoriovirtual.Database.PerfilPassaro;
 import criatoriovirtualapp.jhonata.criatoriovirtual.R;
@@ -25,7 +27,8 @@ public class EditActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView nomeView, nanilhaView;
-    private EditText dataNasc, nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private EditText  nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private MaskedEditText dataNasc;
     Database bd = Room.databaseBuilder(this, Database.class,
             "database_criatoriovirtual").allowMainThreadQueries().build();
     @Override
