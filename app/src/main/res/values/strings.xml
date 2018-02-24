@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Criatório Virtual</string>
+    <string name="item_adicionar">Cadastrar</string>
+    <string name="item_pesquisar">Pesquisar</string>
+    <string name="item_sair">Sair</string>
+    <string name="item_excluir">Excluir</string>
+    <string name="item_voltar">Voltar</string>
+    <string name="item_cadastrar">Cadastrar</string>
+    <string name="item_editar">Editar</string>
+</resources>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="criatoriovirtualapp.jhonata.criatoriovirtual.Activities.EditActivity">
+
+    <include android:id="@+id/toolbarprincipalId"
+        layout="@layout/toolbar"> </include>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Data de Nascimento:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Número da Anilha:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome do Pai:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome da Mãe:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome do Avô(Pai):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome do Avô(Mãe):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome da Avó(Pai):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Nome da Avó(Mãe):"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nomeview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="TextView"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/datanascEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+
+                <TextView
+                    android:id="@+id/nanilhaView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="TextView"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/nomePaiEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+
+                <EditText
+                    android:id="@+id/nomeMaeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+
+                <EditText
+                    android:id="@+id/nomeAvoMPaiEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+
+                <EditText
+                    android:id="@+id/nomeAvoMMaeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+
+                <EditText
+                    android:id="@+id/nomeAvoFPaiEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+
+                <EditText
+                    android:id="@+id/nomeAvoFMaeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="40sp"
+                    android:paddingTop="20sp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:theme="@android:style/Widget.Holo.EditText" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
