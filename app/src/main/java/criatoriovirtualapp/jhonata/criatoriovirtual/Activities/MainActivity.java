@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.support.v7.widget.SearchView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
     private List<PerfilPassaro> passaros;
     private RecyclerView.LayoutManager layoutManager;
     private FloatingActionButton fltBt;
-    private ImageButton deletebt;
+    private ImageView imgGaiola;
 
 
     @Override
@@ -52,11 +54,15 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
         toolbarPrincipal = findViewById(R.id.toolbarprincipalId);
         toolbarPrincipal.setTitle("Criatório Virtual");
         setSupportActionBar(toolbarPrincipal);
+        imgGaiola = findViewById(R.id.gaiolaImg);
         fltBt = findViewById(R.id.FltBt);
-        deletebt = findViewById(R.id.btDelete);
         passaros = bd.daoAcess().getAll();
 
-        setarRecyclerView();
+        if(passaros.size() == 0){
+            imgGaiola.setVisibility(View.VISIBLE);
+        }else{
+            setarRecyclerView();
+        }
         listenerButtons();
     }
 
@@ -151,6 +157,9 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
                 bd.daoAcess().delete(bd.daoAcess().findByName(passaro.getNome()));
                 passaros = bd.daoAcess().getAll();
                 setarRecyclerView();
+                if(passaros.size() == 0){
+                    imgGaiola.setVisibility(View.VISIBLE);
+                }
                 dialog.dismiss();
                 resp[0] = true;
 

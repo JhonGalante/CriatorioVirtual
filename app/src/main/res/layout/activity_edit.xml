@@ -19,7 +19,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId"
+        android:focusable="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,13 +43,15 @@
                     android:paddingTop="20sp"
                     android:singleLine="true"
                     android:text="Nome:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp" />
 
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -60,6 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -71,6 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -82,6 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -93,6 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -104,6 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -115,6 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
@@ -126,6 +135,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40sp"
                     android:paddingTop="20sp"
                     android:singleLine="true"

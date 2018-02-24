@@ -21,7 +21,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp"
+        android:focusable="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +45,8 @@
                     android:paddingTop="20dp"
                     android:singleLine="true"
                     android:text="*Nome:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -53,7 +57,8 @@
                     android:paddingTop="20dp"
                     android:singleLine="true"
                     android:text="Data de Nascimento:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -64,7 +69,8 @@
                     android:paddingTop="20dp"
                     android:singleLine="true"
                     android:text="*Número da Anilha:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -75,7 +81,8 @@
                     android:paddingTop="20dp"
                     android:singleLine="true"
                     android:text="Nome do Pai:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -86,13 +93,15 @@
                     android:paddingTop="20dp"
                     android:singleLine="true"
                     android:text="Nome da Mãe:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"/>
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
@@ -104,6 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
@@ -115,6 +125,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
@@ -126,6 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
                     android:paddingBottom="40dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
