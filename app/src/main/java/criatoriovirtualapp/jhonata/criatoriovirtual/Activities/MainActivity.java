@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
     private RecyclerView.LayoutManager layoutManager;
     private FloatingActionButton fltBt;
     private ImageView imgGaiola;
+    private Layout land;
 
 
     @Override

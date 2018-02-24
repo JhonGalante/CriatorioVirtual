@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landId"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="criatoriovirtualapp.jhonata.criatoriovirtual.Activities.MainActivity">
@@ -29,11 +30,8 @@
         android:id="@+id/recyclerviewmain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignEnd="@+id/FltBt"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/FltBt"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp">
+        android:layout_below="@+id/toolbarprincipalId"
+        android:layout_centerHorizontal="true">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -53,7 +51,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.108"
