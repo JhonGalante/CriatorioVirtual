@@ -134,14 +134,15 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
 
         newText = newText.toLowerCase();
         ArrayList<PerfilPassaro> novoArray = new ArrayList<>();
-
-        for (PerfilPassaro passaro : passaros){
-            String nome = passaro.getNome().toLowerCase();
-            if(nome.contains(newText)){ //Verifica se contém o texto digitado nos dados do recycler
-                novoArray.add(passaro);
+        if(passaros.size() != 0) {
+            for (PerfilPassaro passaro : passaros) {
+                String nome = passaro.getNome().toLowerCase();
+                if (nome.contains(newText)) { //Verifica se contém o texto digitado nos dados do recycler
+                    novoArray.add(passaro);
+                }
             }
+            adapter.setFilter(novoArray); //Cria um array com todos os dados que batem com o texto digitado e cria um novo array
         }
-        adapter.setFilter(novoArray); //Cria um array com todos os dados que batem com o texto digitado e cria um novo array
         return true;
     }
 
