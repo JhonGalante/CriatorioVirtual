@@ -1,19 +1,22 @@
 package criatoriovirtualapp.jhonata.criatoriovirtual.Activities;
 
 import android.arch.persistence.room.Room;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.support.v7.widget.SearchView;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 import criatoriovirtualapp.jhonata.criatoriovirtual.Database.Database;
@@ -76,8 +79,12 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new PerfilPassaroAdapter(this, passaros, this, this);
-        recyclerView.setAdapter(adapter);
+        if (passaros!=null) {
+            adapter = new PerfilPassaroAdapter(this, passaros, this, this);
+            recyclerView.setAdapter(adapter);
+        }else{
+
+        }
     }
 
     public void listenerButtons(){
@@ -131,10 +138,34 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
     }
 
     @Override
-    public void onClickDelete(int position) {
-        passaros = bd.daoAcess().getAll();
-        PerfilPassaro passaro = passaros.get(position);
-        bd.daoAcess().delete(bd.daoAcess().findByName(passaro.getNome()));
-        passaros = bd.daoAcess().getAll();
-    }
+    public boolean onClickDelete(final int position) {
+        final boolean[] resp = new boolean[1];
+        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogCustom));
+        builder.setTitle("Confirmação");
+        builder.setMessage("Tem certeza?");
+        builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                passaros = bd.daoAcess().getAll();
+                PerfilPassaro passaro = passaros.get(position);
+                bd.daoAcess().delete(bd.daoAcess().findByName(passaro.getNome()));
+                passaros = bd.daoAcess().getAll();
+                setarRecyclerView();
+                dialog.dismiss();
+                resp[0] = true;
+
+            }
+        });
+        builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                resp[0] = false;
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+        return resp[0];
+        }
 }

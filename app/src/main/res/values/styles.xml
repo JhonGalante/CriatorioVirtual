@@ -14,4 +14,8 @@
 
     </style>
 
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#8bc34a</item>
+    </style>
+
 </resources>

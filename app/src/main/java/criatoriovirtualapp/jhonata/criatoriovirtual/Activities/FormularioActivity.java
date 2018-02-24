@@ -11,6 +11,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import br.com.sapereaude.maskedEditText.MaskedEditText;
 import criatoriovirtualapp.jhonata.criatoriovirtual.Database.Database;
 import criatoriovirtualapp.jhonata.criatoriovirtual.Database.PerfilPassaro;
 import criatoriovirtualapp.jhonata.criatoriovirtual.R;
@@ -23,7 +25,8 @@ import criatoriovirtualapp.jhonata.criatoriovirtual.R;
 public class FormularioActivity extends AppCompatActivity {
 
     private Toolbar toolbarFormulario;
-    private EditText nome, dataNasc, nAnilha, nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private EditText nome, nAnilha, nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private MaskedEditText dataNasc;
     PerfilPassaro perfil = new PerfilPassaro();
     Database bd = Room.databaseBuilder(this, Database.class,
             "database_criatoriovirtual").allowMainThreadQueries().build();

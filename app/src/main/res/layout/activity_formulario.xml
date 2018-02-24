@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="criatoriovirtualapp.jhonata.criatoriovirtual.Activities.FormularioActivity">
+    tools:context="criatoriovirtualapp.jhonata.criatoriovirtual.Activities.FormularioActivity"
+    xmlns:mask="http://schemas.android.com/apk/res-auto">
 
     <include android:id="@+id/toolbarprincipalId"
         layout="@layout/toolbar"> </include>
@@ -151,17 +152,20 @@
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
 
-                <EditText
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
                     android:id="@+id/datanascEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:drawable/editbox_background"
-                    android:ems="10"
                     android:inputType="date"
                     android:paddingBottom="40dp"
                     android:paddingTop="20dp"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    mask:allowed_chars="1234567890"
+                    mask:mask="##/##/####" />
+
+
 
                 <EditText
                     android:id="@+id/nanilhaEdit"

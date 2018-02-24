@@ -1,5 +1,6 @@
 package criatoriovirtualapp.jhonata.criatoriovirtual.RecyclerView;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
+
+import criatoriovirtualapp.jhonata.criatoriovirtual.Activities.MainActivity;
 import criatoriovirtualapp.jhonata.criatoriovirtual.Database.PerfilPassaro;
 import criatoriovirtualapp.jhonata.criatoriovirtual.R;
 
@@ -46,8 +49,10 @@ public class PerfilPassaroAdapter extends RecyclerView.Adapter<PerfilPassaroAdap
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                removerItem(position);
-                myClickDelete.onClickDelete(position);
+                if(myClickDelete.onClickDelete(position) == true) {
+                    removerItem(position);
+                    myClickDelete.onClickDelete(position);
+                }
             }
         });
     }

@@ -7,5 +7,5 @@ package criatoriovirtualapp.jhonata.criatoriovirtual.RecyclerView;
 
 public interface MyClickDelete {
 
-    void onClickDelete(int position);
+    boolean onClickDelete(int position);
 }

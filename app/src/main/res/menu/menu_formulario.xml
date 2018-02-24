@@ -6,7 +6,8 @@
     <item android:id="@+id/item_cadastrar"
         android:title="@string/item_cadastrar"
         android:orderInCategory="100"
-        app:showAsAction="never"></item>
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_name"></item>
 
     <item android:id="@+id/item_voltar"
         android:title="@string/item_voltar"
