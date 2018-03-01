@@ -119,6 +119,10 @@ public class MainActivity extends AppCompatActivity implements ClickRecyclerView
         intent.putExtra("nomeavommae", passaro.getNomeavommae());
         intent.putExtra("nomeavofpai", passaro.getNomeavofpai());
         intent.putExtra("nomeavofmae", passaro.getNomeavofmae());
+        intent.putExtra("nomebisavompai", passaro.getNomebisavompai());
+        intent.putExtra("nomebisavommae", passaro.getNomebisavommae());
+        intent.putExtra("nomebisavofpai", passaro.getNomebisavofpai());
+        intent.putExtra("nomebisavofmae", passaro.getNomebisavofmae());
         startActivity(intent);
     }
 

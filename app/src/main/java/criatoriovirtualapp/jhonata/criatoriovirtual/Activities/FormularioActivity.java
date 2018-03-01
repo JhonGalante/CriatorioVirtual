@@ -26,6 +26,7 @@ public class FormularioActivity extends AppCompatActivity {
 
     private Toolbar toolbarFormulario;
     private EditText nome, nAnilha, nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private EditText nomeBisavoMPai, nomeBisavoMMae, nomeBisavoFPai, nomeBisavoFMae;
     private MaskedEditText dataNasc;
     PerfilPassaro perfil = new PerfilPassaro();
     Database bd = Room.databaseBuilder(this, Database.class,
@@ -49,6 +50,10 @@ public class FormularioActivity extends AppCompatActivity {
         nomeAvoMMae = findViewById(R.id.nomeavommaeEdit);
         nomeAvoFPai = findViewById(R.id.nomeavofpaiEdit);
         nomeAvoFMae = findViewById(R.id.nomeavofmaeEdit);
+        nomeBisavoMPai = findViewById(R.id.nomebisavompai);
+        nomeBisavoMMae = findViewById(R.id.nomebisavommae);
+        nomeBisavoFPai = findViewById(R.id.nomebisavofpai);
+        nomeBisavoFMae = findViewById(R.id.nomebisavofmae);
 
     }
 
@@ -64,8 +69,8 @@ public class FormularioActivity extends AppCompatActivity {
 
         switch(item.getItemId()){
             case R.id.item_cadastrar:
-                if(nome.getText().toString().equals("") || nAnilha.getText().toString().equals("")) {
-                    Toast.makeText(FormularioActivity.this, "Favor preencher os campos obrigatórios", Toast.LENGTH_SHORT).show();
+                if(nome.getText().toString().equals("")) {
+                    Toast.makeText(FormularioActivity.this, "Favor preencher o campo obrigatório", Toast.LENGTH_SHORT).show();
                 }else {
                     perfil.setNome(nome.getText().toString());
                     perfil.setDatanasc(dataNasc.getText().toString());
@@ -76,6 +81,10 @@ public class FormularioActivity extends AppCompatActivity {
                     perfil.setNomeavofmae(nomeAvoFMae.getText().toString());
                     perfil.setNomeavompai(nomeAvoMPai.getText().toString());
                     perfil.setNomeavommae(nomeAvoMMae.getText().toString());
+                    perfil.setNomebisavompai(nomeBisavoMPai.getText().toString());
+                    perfil.setNomebisavommae(nomeBisavoMMae.getText().toString());
+                    perfil.setNomebisavofpai(nomeBisavoFPai.getText().toString());
+                    perfil.setNomebisavofmae(nomeBisavoFMae.getText().toString());
                     if(bd.daoAcess().findByAnilha(perfil.getNanilha()) != null){
                         Toast.makeText(this, "Perfil atualizado com sucesso", Toast.LENGTH_SHORT).show();
                     }

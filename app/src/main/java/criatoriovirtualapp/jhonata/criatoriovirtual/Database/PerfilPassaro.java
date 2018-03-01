@@ -33,6 +33,14 @@ public class PerfilPassaro {
     private String nomeavompai;
     @ColumnInfo(name = "Nome_do_Avô(Mãe)")
     private String nomeavommae;
+    @ColumnInfo
+    private String nomebisavofpai;
+    @ColumnInfo
+    private String nomebisavofmae;
+    @ColumnInfo
+    private String nomebisavompai;
+    @ColumnInfo
+    private String nomebisavommae;
 
     public String getNome() {
         return nome;
@@ -104,5 +112,37 @@ public class PerfilPassaro {
 
     public void setNomeavommae(String nomeavommae) {
         this.nomeavommae = nomeavommae;
+    }
+
+    public String getNomebisavofpai() {
+        return nomebisavofpai;
+    }
+
+    public void setNomebisavofpai(String nomebisavofpai) {
+        this.nomebisavofpai = nomebisavofpai;
+    }
+
+    public String getNomebisavofmae() {
+        return nomebisavofmae;
+    }
+
+    public void setNomebisavofmae(String nomebisavofmae) {
+        this.nomebisavofmae = nomebisavofmae;
+    }
+
+    public String getNomebisavompai() {
+        return nomebisavompai;
+    }
+
+    public void setNomebisavompai(String nomebisavompai) {
+        this.nomebisavompai = nomebisavompai;
+    }
+
+    public String getNomebisavommae() {
+        return nomebisavommae;
+    }
+
+    public void setNomebisavommae(String nomebisavommae) {
+        this.nomebisavommae = nomebisavommae;
     }
 }

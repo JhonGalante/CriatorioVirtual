@@ -26,8 +26,9 @@ import criatoriovirtualapp.jhonata.criatoriovirtual.R;
 public class EditActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private TextView nomeView, nanilhaView;
-    private EditText  nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private TextView nomeView;
+    private EditText  nanilha, nomePai, nomeMae, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
+    private EditText nomeBisavoMPai, nomeBisavoMMae, nomeBisavoFPai, nomeBisavoFMae;
     private MaskedEditText dataNasc;
     Database bd = Room.databaseBuilder(this, Database.class,
             "database_criatoriovirtual").allowMainThreadQueries().build();
@@ -41,7 +42,7 @@ public class EditActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         nomeView = findViewById(R.id.nomeview);
-        nanilhaView = findViewById(R.id.nanilhaView);
+        nanilha = findViewById(R.id.nanilhaedit);
         dataNasc = findViewById(R.id.datanascEdit);
         nomePai = findViewById(R.id.nomePaiEdit);
         nomeMae = findViewById(R.id.nomeMaeEdit);
@@ -49,11 +50,15 @@ public class EditActivity extends AppCompatActivity {
         nomeAvoMMae =findViewById(R.id.nomeAvoMMaeEdit);
         nomeAvoFPai = findViewById(R.id.nomeAvoFPaiEdit);
         nomeAvoFMae = findViewById(R.id.nomeAvoFMaeEdit);
+        nomeBisavoMPai = findViewById(R.id.nomeBisavoMPaiEdit);
+        nomeBisavoMMae = findViewById(R.id.nomeBisavoMMaeEdit);
+        nomeBisavoFPai = findViewById(R.id.nomeBisavoFPaiEdit);
+        nomeBisavoFMae = findViewById(R.id.nomeBisavoFMaeEdit);
 
         Intent intent = getIntent();
 
         nomeView.setText(intent.getStringExtra("nome"));
-        nanilhaView.setText(intent.getStringExtra("nanilha"));
+        nanilha.setText(intent.getStringExtra("nanilha"));
         dataNasc.setText(intent.getStringExtra("datanasc"));
         nomePai.setText(intent.getStringExtra("nomepai"));
         nomeMae.setText(intent.getStringExtra("nomemae"));
@@ -61,6 +66,10 @@ public class EditActivity extends AppCompatActivity {
         nomeAvoMMae.setText(intent.getStringExtra("nomeavommae"));
         nomeAvoFPai.setText(intent.getStringExtra("nomeavofpai"));
         nomeAvoFMae.setText(intent.getStringExtra("nomeavofmae"));
+        nomeBisavoMPai.setText(intent.getStringExtra("nomebisavompai"));
+        nomeBisavoMMae.setText(intent.getStringExtra("nomebisavommae"));
+        nomeBisavoFPai.setText(intent.getStringExtra("nomebisavofpai"));
+        nomeBisavoFMae.setText(intent.getStringExtra("nomebisavofmae"));
 
     }
 
@@ -79,13 +88,17 @@ public class EditActivity extends AppCompatActivity {
                 PerfilPassaro perfil = new PerfilPassaro();
                 perfil.setNome(nomeView.getText().toString());
                 perfil.setDatanasc(dataNasc.getText().toString());
-                perfil.setNanilha(nanilhaView.getText().toString());
+                perfil.setNanilha(nanilha.getText().toString());
                 perfil.setNomepai(nomePai.getText().toString());
                 perfil.setNomemae(nomeMae.getText().toString());
                 perfil.setNomeavompai(nomeAvoMPai.getText().toString());
                 perfil.setNomeavommae(nomeAvoMMae.getText().toString());
                 perfil.setNomeavofpai(nomeAvoFPai.getText().toString());
                 perfil.setNomeavofmae(nomeAvoFMae.getText().toString());
+                perfil.setNomebisavompai(nomeBisavoMPai.getText().toString());
+                perfil.setNomebisavommae(nomeBisavoMMae.getText().toString());
+                perfil.setNomebisavofpai(nomeBisavoFPai.getText().toString());
+                perfil.setNomebisavofmae(nomeBisavoFMae.getText().toString());
                 updatePerfil(perfil);
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -106,13 +119,7 @@ public class EditActivity extends AppCompatActivity {
     }
 
     void updatePerfil(final PerfilPassaro perfil){
-        new AsyncTask<Void, Void, Void>(){
 
-            @Override
-            protected Void doInBackground(Void... voids) {
-                bd.daoAcess().update(perfil);
-                return null;
-            }
-        }.execute();
+        bd.daoAcess().update(perfil);
     }
 }

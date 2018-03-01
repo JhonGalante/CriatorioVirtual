@@ -17,11 +17,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:scrollbars="horizontal|vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId"
-        android:focusable="false">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +81,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
-                    android:text="Nome do Pai:"
+                    android:text="Pai:"
                     android:textSize="18sp" />
 
                 <TextView
@@ -92,7 +93,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
-                    android:text="Nome da Mãe:"
+                    android:text="Mãe:"
                     android:textSize="18sp" />
 
                 <TextView
@@ -104,7 +105,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
-                    android:text="Nome do Avô(Pai):"
+                    android:text="Avô(Pai):"
                     android:textSize="18sp" />
 
                 <TextView
@@ -116,7 +117,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
-                    android:text="Nome do Avô(Mãe):"
+                    android:text="Avô(Mãe):"
                     android:textSize="18sp" />
 
                 <TextView
@@ -128,7 +129,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
-                    android:text="Nome da Avó(Pai):"
+                    android:text="Avó(Pai):"
                     android:textSize="18sp" />
 
                 <TextView
@@ -140,7 +141,47 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20sp"
                     android:singleLine="true"
-                    android:text="Nome da Avó(Mãe):"
+                    android:text="Avó(Mãe):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavô{Pai):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavô(Mãe):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavó(Pai):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavô(Mãe):"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -156,6 +197,7 @@
                     android:id="@+id/nomeview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
@@ -166,6 +208,7 @@
                     android:id="@+id/datanascEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:inputType="date"
                     android:paddingBottom="20dp"
@@ -174,27 +217,29 @@
                     mask:allowed_chars="1234567890"
                     mask:mask="##/##/####" />
 
-                <TextView
-                    android:id="@+id/nanilhaView"
+                <EditText
+                    android:id="@+id/nanilhaedit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="TextView"
-                    android:textSize="18sp" />
+                    android:textColor="@android:color/black" />
 
                 <EditText
                     android:id="@+id/nomePaiEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Name"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:theme="@android:style/Widget.Holo.EditText" />
@@ -203,13 +248,13 @@
                     android:id="@+id/nomeMaeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Name"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:theme="@android:style/Widget.Holo.EditText" />
@@ -218,13 +263,13 @@
                     android:id="@+id/nomeAvoMPaiEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Name"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:theme="@android:style/Widget.Holo.EditText" />
@@ -233,13 +278,13 @@
                     android:id="@+id/nomeAvoMMaeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Name"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:theme="@android:style/Widget.Holo.EditText" />
@@ -248,13 +293,13 @@
                     android:id="@+id/nomeAvoFPaiEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Name"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:theme="@android:style/Widget.Holo.EditText" />
@@ -263,16 +308,64 @@
                     android:id="@+id/nomeAvoFMaeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Name"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:theme="@android:style/Widget.Holo.EditText" />
+
+                <EditText
+                    android:id="@+id/nomeBisavoMPaiEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nomeBisavoMMaeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nomeBisavoFPaiEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nomeBisavoFMaeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
             </LinearLayout>
 
         </LinearLayout>

@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import criatoriovirtualapp.jhonata.criatoriovirtual.R;
 /**
  * Created by Jhonata Galante on 23/02/2018.
@@ -21,7 +23,7 @@ public class DadosActivity extends AppCompatActivity {
     private Toolbar toolbarFormulario;
     private Button btVoltar;
     private TextView nomeView, datanascView, anilhaView, nomePaiView, nomeMaeView, nomeAvoMPai, nomeAvoMMae, nomeAvoFPai, nomeAvoFMae;
-
+    private TextView nomeBisavoMPaiView, nomeBisavoMMaeView, nomeBisavoFPaiView, nomeBisavoFMaeView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,10 @@ public class DadosActivity extends AppCompatActivity {
         nomeAvoMMae = findViewById(R.id.nomeavommae);
         nomeAvoFPai = findViewById(R.id.nomeavofpai);
         nomeAvoFMae = findViewById(R.id.nomeavofmae);
+        nomeBisavoMPaiView = findViewById(R.id.nomebisavompaiview);
+        nomeBisavoMMaeView = findViewById(R.id.nomebisavommaeview);
+        nomeBisavoFPaiView = findViewById(R.id.nomebisavofpaiview);
+        nomeBisavoFMaeView = findViewById(R.id.nomebisavofmaeview);
 
         final Intent intent = getIntent();
         nomeView.setText(intent.getStringExtra("nome"));
@@ -51,6 +57,10 @@ public class DadosActivity extends AppCompatActivity {
         nomeAvoMMae.setText(intent.getStringExtra("nomeavommae"));
         nomeAvoFPai.setText(intent.getStringExtra("nomeavofpai"));
         nomeAvoFMae.setText(intent.getStringExtra("nomeavofmae"));
+        nomeBisavoMPaiView.setText(intent.getStringExtra("nomebisavompai"));
+        nomeBisavoMMaeView.setText(intent.getStringExtra("nomebisavommae"));
+        nomeBisavoFPaiView.setText(intent.getStringExtra("nomebisavofpai"));
+        nomeBisavoFMaeView.setText(intent.getStringExtra("nomebisavofmae"));
 
     }
 

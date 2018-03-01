@@ -17,14 +17,13 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:scrollbars="horizontal|vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="8dp"
-        android:focusable="false">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +68,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="*Número da Anilha:"
+                    android:text="Número da Anilha:"
                     android:textSize="18sp" />
 
                 <TextView
@@ -81,7 +80,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Nome do Pai:"
+                    android:text="Pai:"
                     android:textSize="18sp" />
 
                 <TextView
@@ -93,7 +92,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Nome da Mãe:"
+                    android:text="Mãe:"
                     android:textSize="18sp" />
 
                 <TextView
@@ -105,7 +104,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Nome do Avô(Pai):"
+                    android:text="Avô(Pai):"
                     android:textSize="18sp" />
 
                 <TextView
@@ -117,7 +116,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Nome do Avô(Mãe):"
+                    android:text="Avô(Mãe):"
                     android:textSize="18sp" />
 
                 <TextView
@@ -129,7 +128,7 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Nome da Avó(Pai):"
+                    android:text="Avó(Pai):"
                     android:textSize="18sp" />
 
                 <TextView
@@ -141,7 +140,51 @@
                     android:paddingBottom="20dp"
                     android:paddingTop="20dp"
                     android:singleLine="true"
-                    android:text="Nome da Avó(Mãe):"
+                    android:text="Avó(Mãe):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavô(Pai):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavô(Mãe):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavó(Pai):"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="Bisavó(Mãe):"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -154,6 +197,7 @@
                     android:id="@+id/nomeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -169,6 +213,7 @@
                     android:id="@+id/datanascEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:inputType="date"
                     android:paddingBottom="20dp"
@@ -182,6 +227,7 @@
                     android:id="@+id/nanilhaEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="number"
@@ -194,6 +240,7 @@
                     android:id="@+id/nomepaiEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -206,6 +253,7 @@
                     android:id="@+id/nomemaeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -218,6 +266,7 @@
                     android:id="@+id/nomeavompaiEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -230,6 +279,7 @@
                     android:id="@+id/nomeavommaeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -242,6 +292,7 @@
                     android:id="@+id/nomeavofpaiEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -254,6 +305,7 @@
                     android:id="@+id/nomeavofmaeEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -261,6 +313,54 @@
                     android:paddingTop="20dp"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/nomebisavompai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nomebisavommae"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nomebisavofpai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nomebisavofmae"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/black" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

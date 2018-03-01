@@ -19,249 +19,340 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:scrollbars="horizontal|vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarprincipalId">
 
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:addStatesFromChildren="false"
-                android:baselineAligned="false"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome: "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Data de Nascimento: "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Número da Anilha: "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome do Pai: "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome da Mãe: "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome do Avô (Pai): "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome do Avô(Mãe): "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome da Avó(Pai): "
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:singleLine="true"
-                    android:text="Nome da Avó(Mãe):"
-                    android:textAlignment="textStart"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:addStatesFromChildren="false"
-                android:baselineAligned="false"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:scrollbars="horizontal|vertical">
 
-                <TextView
-                    android:id="@+id/nome"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:addStatesFromChildren="false"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Nome: "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="Data de Nascimento: "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Número da Anilha: "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Pai:"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Mãe: "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Avô (Pai): "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Avô(Mãe): "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Avó(Pai): "
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="Avó(Mãe):"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="Bisavô(Pai):"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="Bisavô(Mãe):"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="Bisavó(Pai):"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="Bisavó(Mãe):"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    android:addStatesFromChildren="false"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:scrollbars="horizontal|vertical">
 
-                <TextView
-                    android:id="@+id/datanasc"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nanilha"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/datanasc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nomepai"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nanilha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nomemae"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nomepai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nomeavompai"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nomemae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nomeavommae"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nomeavompai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nomeavofpai"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nomeavommae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/nomeavofmae"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="20dp"
-                    android:text="TextView"
-                    android:textAlignment="viewStart"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/nomeavofpai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
 
+                    <TextView
+                        android:id="@+id/nomeavofmae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/nomebisavompaiview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/nomebisavommaeview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/nomebisavofpaiview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/nomebisavofmaeview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="TextView"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+
+        </HorizontalScrollView>
+
+
 
     </ScrollView>
 
